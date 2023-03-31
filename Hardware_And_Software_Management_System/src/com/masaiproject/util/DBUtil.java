@@ -1,4 +1,4 @@
-package util;
+package com.masaiproject.util;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -44,3 +44,4 @@ static {
 	}
 	
 }
+

@@ -1,5 +1,13 @@
 package com.masaiproject.dao;
 
+import java.util.List;
+
+import com.masaiproject.Exception.ComplaintException;
+import com.masaiproject.Exception.EmployeeException;
+import com.masaiproject.model.Complaints;
+import com.masaiproject.model.Employee;
+import com.masaiproject.model.EngineerComplaintsDTO;
+
 public interface EmployeeDao {
 
 	public String registerEmployee(int deptid, String name, String username, String password) throws EmployeeException;

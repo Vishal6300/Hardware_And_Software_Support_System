@@ -13,7 +13,7 @@ public class DBUtil {
     
 static {
         
-        ResourceBundle rb= ResourceBundle.getBundle("dbdetails");
+        ResourceBundle rb= ResourceBundle.getBundle("databaseConnector");
         
         url= rb.getString("db.url");
         driverName= rb.getString("db.drivername");

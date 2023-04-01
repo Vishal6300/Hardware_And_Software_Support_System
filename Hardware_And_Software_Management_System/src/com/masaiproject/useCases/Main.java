@@ -213,6 +213,6 @@ public class Main {
 			System.exit(0);
 		
 		}
-		sc.close();
+//		sc.close();
 	}
 }

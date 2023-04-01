@@ -222,3 +222,13 @@ mysql> select* from department;
 |      2 | SSM   | New Delhi |
 +--------+-------+-----------+
 2 rows in set (0.00 sec)
+
+mysql> select* from employee;
++-------+--------+-------+------------+-----------+
+| EmpId | deptId | name  | username   | password  |
++-------+--------+-------+------------+-----------+
+|   101 |      1 | suraj | surajkumar | Suraj@123 |
+|   102 |      2 | rohan | rohankumar | rohan@123 |
+|   103 |      2 | Mohan | mohankumar | Mohan@123 |
++-------+--------+-------+------------+-----------+
+3 rows in set (0.01 sec)

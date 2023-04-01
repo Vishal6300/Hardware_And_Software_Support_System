@@ -45,5 +45,6 @@ public void employeeChangePassword() {
 					+ " an uppercase letter, a lowercase letter, a number and a special character"
 					+ "without a space.");
 		}
+		sc.close();
 }	
 }

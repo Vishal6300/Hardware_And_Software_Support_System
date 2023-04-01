@@ -3,10 +3,8 @@ package com.masaiproject.useCases;
 import java.util.Scanner;
 
 import com.masaiproject.Exception.ComplaintException;
-import com.masaiproject.Exception.EngineerException;
 import com.masaiproject.dao.EngineerDao;
 import com.masaiproject.dao.EngineerDaoImpl;
-import com.masaiproject.model.Engineer;
 
 public class EngineerUpdateComplaintStatus {
 	public void engUpdateComplaintStatus() {
@@ -38,5 +36,6 @@ public class EngineerUpdateComplaintStatus {
 		}else {
 			System.out.println("Invalid choice. Please try again.");
 		}
+		sc.close();
 	}
 }

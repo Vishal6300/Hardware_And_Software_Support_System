@@ -16,7 +16,7 @@ public int engineerLogin() {
 		System.out.println("Enter password");
 		String password = sc.next();
 		System.out.println("===================================");
-		
+		sc.close();
 		EngineerDao dao = new EngineerDaoImpl();
 		int engId = 0;
 		
@@ -29,5 +29,6 @@ public int engineerLogin() {
 			engineerLogin();
 		}
 		return engId;
+		
 	}
 }

@@ -4,10 +4,7 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import com.masaiproject.Exception.EmployeeException;
 import com.masaiproject.Exception.EngineerException;
-import com.masaiproject.dao.EmployeeDao;
-import com.masaiproject.dao.EmployeeDaoImpl;
 import com.masaiproject.dao.EngineerDao;
 import com.masaiproject.dao.EngineerDaoImpl;
 
@@ -46,5 +43,6 @@ public class EngineerChangePassword {
 					+ " an uppercase letter, a lowercase letter, a number and a special character"
 					+ "without a space.");
 		}
+		sc.close();
 	}
 }

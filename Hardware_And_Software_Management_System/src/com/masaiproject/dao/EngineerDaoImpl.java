@@ -1,5 +1,6 @@
 package com.masaiproject.dao;
 
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -13,7 +14,7 @@ import com.masaiproject.model.Complaints;
 import com.masaiproject.model.Engineer;
 import com.masaiproject.util.DBUtil;
 
-public class EngineerDaoImpl {
+public class EngineerDaoImpl implements EngineerDao{
 	@Override
 	public Engineer loginEngineer(String username, String password) throws EngineerException {
 		Engineer eng = new Engineer();

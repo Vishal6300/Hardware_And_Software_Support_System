@@ -1,5 +1,6 @@
 package com.masaiproject.dao;
 
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -14,7 +15,7 @@ import com.masaiproject.model.Employee;
 import com.masaiproject.model.EngineerComplaintsDTO;
 import com.masaiproject.util.DBUtil;
 
-public class EmployeeDaoImpl {
+public class EmployeeDaoImpl implements EmployeeDao {
 	@Override
 	public String registerEmployee(int deptid, String name, String username, String password) throws EmployeeException {
 		String res = "Failed. Some details entered are incorrect. Please try again!";

@@ -28,5 +28,6 @@ public class EmployeeCheckComplaintStatus {
 		} catch (ComplaintException e) {
 			System.out.println(e.getMessage());
 		}
+		sc.close();
 	}
 }

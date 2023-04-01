@@ -33,5 +33,6 @@ public class EmployeeRaiseComplaint {
 			// TODO Auto-generated catch block
 			System.out.println(e.getMessage());
 		}
+		sc.close();
 	}
 }

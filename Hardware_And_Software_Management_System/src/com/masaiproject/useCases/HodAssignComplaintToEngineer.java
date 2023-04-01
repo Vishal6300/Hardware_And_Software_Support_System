@@ -25,5 +25,6 @@ public class HodAssignComplaintToEngineer {
 		} catch (EngineerException e) {
 			System.out.println(e.getMessage());
 		}
+		sc.close();
 	}
 }

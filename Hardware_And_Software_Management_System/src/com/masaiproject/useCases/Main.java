@@ -1,5 +1,7 @@
 package com.masaiproject.useCases;
 
+import java.util.Scanner;
+
 import com.masaiproject.Exception.ComplaintException;
 
 public class Main {
@@ -174,7 +176,7 @@ public class Main {
 						engCompsAss.checkComplaintsAssigned(engIdLoggedin);
 						System.out.println("==========================================");
 					} catch (ComplaintException e) {
-						// TODO Auto-generated catch block
+						
 						System.out.println(e.getMessage());
 					}
 					
@@ -206,12 +208,11 @@ public class Main {
 					System.out.println("Invalid choice. Please try again.");
 				}
 			}
-			
-			
 		case 4: 
 			System.out.println("Thank you.");
 			System.exit(0);
 		
 		}
+		sc.close();
 	}
 }

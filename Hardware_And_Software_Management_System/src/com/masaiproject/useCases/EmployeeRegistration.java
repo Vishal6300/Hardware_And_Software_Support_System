@@ -53,6 +53,6 @@ public class EmployeeRegistration {
 			
 			registerEmployee();
 		}
-		
+		sc.close();
 	}
 }

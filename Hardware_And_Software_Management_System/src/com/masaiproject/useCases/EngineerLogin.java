@@ -24,7 +24,8 @@ public int engineerLogin() {
 			Engineer eng = dao.loginEngineer(username, password);
 			System.out.println("Welcome " + eng.getName());
 			engId=eng.getEngId();
-		} catch (EngineerException e) {
+		}
+			catch (EngineerException e) {
 			System.out.println(e.getMessage());
 			engineerLogin();
 		}

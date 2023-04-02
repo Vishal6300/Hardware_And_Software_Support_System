@@ -179,8 +179,7 @@ mysql> desc employee;
 +----------+-------------+------+-----+---------+----------------+
 5 rows in set (0.00 sec)
 
-mysql> insert into engineer values(101,11,"suraj","surajkumar","Suraj@123");
-ERROR 1136 (21S01): Column count doesn't match value count at row 1
+
 mysql> insert into employee values(101,11,"suraj","surajkumar","Suraj@123");
 ERROR 1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`shsystem`.`employee`, CONSTRAINT `employee_ibfk_1` FOREIGN KEY (`deptId`) REFERENCES `department` (`deptID`))
 mysql> desc department;

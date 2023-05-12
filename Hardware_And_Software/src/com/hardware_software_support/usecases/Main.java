@@ -211,6 +211,10 @@ public class Main {
 				System.out.println("Thank you.");
 				System.exit(0);
 
+			default:
+				System.out.println(ConsoleColors.RED + "Invalid choice" + ConsoleColors.RESET);
+				// System.exit(0);
+				main(args);
 		}
 	}
 }

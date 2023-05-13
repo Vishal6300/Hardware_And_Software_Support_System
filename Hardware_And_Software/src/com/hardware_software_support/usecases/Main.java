@@ -3,17 +3,19 @@ package com.hardware_software_support.usecases;
 import java.util.Scanner;
 
 import com.hardware_software_support.exceptions.ComplaintException;
+import com.hardware_software_support.util.ConsoleColors;
 
 public class Main {
 
 	public static void main(String[] args) {
+		System.out.println(ConsoleColors.BLUE);
 		System.out.println("Welcome to Online Hardware Software Support System.");
 		System.out.println("=====================================================");
 		System.out.println("Enter 1 for HOD Login.");
 		System.out.println("Enter 2 for Employee Login.");
 		System.out.println("Enter 3 for System engineer Login.");
 		System.out.println("Enter 4 for exit");
-
+		System.out.println(ConsoleColors.RESET);
 		Scanner sc = new Scanner(System.in);
 
 		int choice = sc.nextInt();
@@ -78,7 +80,8 @@ public class Main {
 					}
 
 					else {
-						System.out.println("Invalid choice. Please enter a correct choice.");
+						System.out.println(ConsoleColors.RED + "Invalid choice. Please enter a correct choice."
+								+ ConsoleColors.RESET);
 						System.out.println("====================================================");
 
 					}
@@ -203,12 +206,13 @@ public class Main {
 
 						main(args);
 					} else {
-						System.out.println("Invalid choice. Please try again.");
+						System.out
+								.println(ConsoleColors.RED + "Invalid choice. Please try again." + ConsoleColors.RESET);
 					}
 				}
 
 			case 4:
-				System.out.println("Thank you.");
+				System.out.println(ConsoleColors.YELLOW + "Thank you." + ConsoleColors.RESET);
 				System.exit(0);
 
 			default:

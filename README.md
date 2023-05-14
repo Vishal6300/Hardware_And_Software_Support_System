@@ -34,7 +34,7 @@ Roles of Engineer:
 ⦁ Each engineer has their own account by which they can login.(credentials given by
 the HOD)
 ⦁ Engineer can view the problem assigned to him by HOD .
-⦁ Engineer can update the status of the problem addressed by him . i. e. whether it
+⦁ Engineer can update the status of the problem addressed by him . i. e. whether it 
 solved or any
 thing.
 ⦁ They can see list of all the problems attended by him/her.

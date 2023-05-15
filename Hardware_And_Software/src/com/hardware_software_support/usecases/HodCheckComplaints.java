@@ -9,18 +9,18 @@ import com.hardware_software_support.exceptions.ComplaintException;
 import com.hardware_software_support.model.Complaints;
 
 public class HodCheckComplaints {
-
+	// This method is returning a list of complaint that is assigned to engineer
 	public void hodCheckAllComplaints() {
-		
+
 		List<Complaints> comps = new ArrayList<>();
-		
+
 		HodDao dao = new HodDaoImpl();
-		
+
 		try {
 			comps = dao.checkComplaints();
 			comps.forEach(comp -> System.out.println(comp));
 		} catch (ComplaintException e) {
 			System.out.println(e.getMessage());
-		} 
+		}
 	}
 }

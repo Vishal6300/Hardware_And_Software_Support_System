@@ -7,10 +7,10 @@ import com.hardware_software_support.dao.HodDaoImpl;
 import com.hardware_software_support.exceptions.EngineerException;
 
 public class HodRegisterEngineerUsecase {
-	
+	// Here Hod can add engineers
 	public void hodRegisterEngineer() {
 		String res = "Some entries are invalid. Please try again.";
-		
+
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter Engineer name");
 		String name = sc.next();
@@ -18,29 +18,29 @@ public class HodRegisterEngineerUsecase {
 		String username = sc.next();
 		System.out.println("Enter Engineer's password");
 		String password = sc.next();
-		
+		// chhosing which type of engineer it is
 		System.out.println("Enter 1 for Hardware Engineer");
 		System.out.println("Enter 2 for Software Engineer");
 		int typeChoice = sc.nextInt();
-		
+
 		String type = "";
-		
-		if(typeChoice==1) {
+
+		if (typeChoice == 1) {
 			type = "Hardware Engineer";
-		}else if(typeChoice==2) {
+		} else if (typeChoice == 2) {
 			type = "Software Engineer";
-		}else {
+		} else {
 			System.out.println("Invalid choice. Please try again.");
 			hodRegisterEngineer();
 		}
-		
+
 		System.out.println("Enter Engineer's location");
 		String location = sc.next();
-		
+
 		System.out.println("==============================================");
-		
+
 		HodDao dao = new HodDaoImpl();
-		
+
 		try {
 			res = dao.registerEngineer(name, username, password, type, location);
 			System.out.println(res);

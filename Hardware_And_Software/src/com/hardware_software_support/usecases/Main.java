@@ -5,6 +5,7 @@ import java.util.Scanner;
 import com.hardware_software_support.exceptions.ComplaintException;
 import com.hardware_software_support.util.ConsoleColors;
 
+// System will start from this main method
 public class Main {
 
 	public static void main(String[] args) {
@@ -23,7 +24,7 @@ public class Main {
 		System.out.println("================================");
 
 		switch (choice) {
-
+			// case 1 for HOD login
 			case 1:
 				System.out.println("HOD");
 				System.out.println("=============================");
@@ -86,7 +87,7 @@ public class Main {
 
 					}
 				}
-
+				// case 2 for Employee login
 			case 2:
 				while (true) {
 					System.out.println("Employee.");
@@ -151,7 +152,7 @@ public class Main {
 						System.out.println("Invalid choice. Please try again.");
 					}
 				}
-
+				// case 3 is for Engineer login
 			case 3:
 				System.out.println("System Engineer");
 				System.out.println("==================================================");

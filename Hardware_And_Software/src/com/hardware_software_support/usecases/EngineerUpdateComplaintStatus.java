@@ -7,16 +7,19 @@ import com.hardware_software_support.dao.EngineerDaoImpl;
 import com.hardware_software_support.exceptions.ComplaintException;
 
 public class EngineerUpdateComplaintStatus {
-	
+	// This method is created for updating the status for the particular complaint
 	public void engUpdateComplaintStatus() {
+
+		// Taking input of complaint id for update.
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter complaint id to update status.");
 		int complaintId = sc.nextInt();
+		// updating the complaint status as per user request
 		System.out.println("Enter 1 to set status as In Progress.");
 		System.out.println("Enter 2 to set status as Resolved.");
 		String newStatus = "";
 		int status = sc.nextInt();
-		if(status==1) {
+		if (status == 1) {
 			newStatus = "In Progress";
 			EngineerDao dao = new EngineerDaoImpl();
 			try {
@@ -25,7 +28,7 @@ public class EngineerUpdateComplaintStatus {
 			} catch (ComplaintException e) {
 				System.out.println(e.getMessage());
 			}
-		}else if(status==2) {
+		} else if (status == 2) {
 			newStatus = "Resolved";
 			EngineerDao dao = new EngineerDaoImpl();
 			try {
@@ -34,7 +37,7 @@ public class EngineerUpdateComplaintStatus {
 			} catch (ComplaintException e) {
 				System.out.println(e.getMessage());
 			}
-		}else {
+		} else {
 			System.out.println("Invalid choice. Please try again.");
 		}
 	}

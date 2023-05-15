@@ -1,6 +1,7 @@
 package com.hardware_software_support.exceptions;
 
-public class ComplaintException extends Exception{
+// This exception class is handling the exceptions of Engineer and Employee Both
+public class ComplaintException extends Exception {
 
 	public ComplaintException() {
 	}
@@ -8,6 +9,5 @@ public class ComplaintException extends Exception{
 	public ComplaintException(String msg) {
 		super(msg);
 	}
-	
-	
+
 }

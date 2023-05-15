@@ -8,18 +8,18 @@ import com.hardware_software_support.exceptions.ComplaintException;
 import com.hardware_software_support.model.EngineerComplaintsDTO;
 
 public class EmployeeCheckComplaintStatus {
-	
+	// checking the complaint status using id
 	public void checkCompStatus() {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter your complaint id to check status");
 		int compId = sc.nextInt();
 		System.out.println("=======================================");
 		System.out.println("Complaint status:- ");
-		
+
 		EmployeeDao dao = new EmployeeDaoImpl();
-		
+
 		try {
-			EngineerComplaintsDTO dto =  dao.checkComplaintStatus(compId);
+			EngineerComplaintsDTO dto = dao.checkComplaintStatus(compId);
 			System.out.println("ComplaintId: " + dto.getComplaintId());
 			System.out.println("Complaint Type: " + dto.getComplaintType());
 			System.out.println("Engineer id: " + dto.getEngId());

@@ -48,16 +48,14 @@ public class EmployeeDaoImpl implements EmployeeDao {
 	}
 
 	@Override
-	public Employee loginEmployee(String username, String password) throws EmployeeException {
+	public Employee loginEmployee(String username) throws EmployeeException {
 		Employee emp = new Employee();
 
 		try (Connection conn = DBUtil.provideConnection()) {
 
-			PreparedStatement ps = conn.prepareStatement("select * from employee where username=?"
-					+ "AND password = ?");
+			PreparedStatement ps = conn.prepareStatement("select * from employee where username=?");
 
 			ps.setString(1, username);
-			ps.setString(2, password);
 
 			ResultSet rs = ps.executeQuery();
 			if (rs.next()) {
@@ -67,7 +65,7 @@ public class EmployeeDaoImpl implements EmployeeDao {
 				emp.setUserName(rs.getString("username"));
 				emp.setPassword(rs.getString("password"));
 			} else {
-				throw new EmployeeException("Invalid username or password");
+				throw new EmployeeException("Invalid username");
 			}
 
 		} catch (SQLException e) {

@@ -13,7 +13,7 @@ public interface EmployeeDao {
 
 	public String registerEmployee(int deptid, String name, String username, String password) throws EmployeeException;
 
-	public Employee loginEmployee(String username, String password) throws EmployeeException;
+	public Employee loginEmployee(String username) throws EmployeeException;
 
 	public int raiseComplaint(int empId, String compType) throws ComplaintException;
 

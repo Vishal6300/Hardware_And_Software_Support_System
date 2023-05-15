@@ -8,11 +8,12 @@ import com.hardware_software_support.exceptions.ComplaintException;
 import com.hardware_software_support.model.Complaints;
 
 public class EmployeeCheckComplaintHistory {
-
+	// This method is checking the history of the complaint that is raised to
+	// engineer.
 	public void checkComplaintHistory(int empId) {
-		
+
 		EmployeeDao dao = new EmployeeDaoImpl();
-		
+
 		try {
 			List<Complaints> complaints = dao.checkComplaintHistory(empId);
 			complaints.forEach(comp -> System.out.println(comp));

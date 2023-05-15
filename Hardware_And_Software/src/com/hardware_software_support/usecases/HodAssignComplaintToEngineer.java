@@ -7,18 +7,18 @@ import com.hardware_software_support.dao.HodDaoImpl;
 import com.hardware_software_support.exceptions.EngineerException;
 
 public class HodAssignComplaintToEngineer {
-
+	// This method is used to assign the complaint to an engineer
 	public void assignToEngineer() {
 		Scanner sc = new Scanner(System.in);
 		HodDao dao = new HodDaoImpl();
 		System.out.println("Assign a complaint to an engineer");
 		System.out.println("========================================");
-		
+
 		System.out.println("Enter complaint id to be assigned.");
 		int compId = sc.nextInt();
 		System.out.println("Enter engineer id to assign the complaint.");
 		int engId = sc.nextInt();
-		
+
 		try {
 			String res = dao.assignComplaintToEngineer(compId, engId);
 			System.out.println(res);
